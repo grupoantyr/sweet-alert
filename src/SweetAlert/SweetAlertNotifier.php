@@ -184,7 +184,8 @@ class SweetAlertNotifier
      */
     public function confirmButton($buttonText = 'OK', $overrides = [])
     {
-        $this->addButton('confirm', $buttonText, $overrides);
+        //$this->addButton('confirm', $buttonText, $overrides);
+        $this->config['confirmButtonText'] = $buttonText;
 
         return $this;
     }
@@ -199,7 +200,9 @@ class SweetAlertNotifier
      */
     public function cancelButton($buttonText = 'Cancel', $overrides = [])
     {
-        $this->addButton('cancel', $buttonText, $overrides);
+        //$this->addButton('cancel', $buttonText, $overrides);
+        $this->config['showCancelButton'] = true;
+        $this->config['cancelButtonText'] = $buttonText;
 
         return $this;
     }
@@ -253,7 +256,8 @@ class SweetAlertNotifier
      */
     public function persistent($buttonText = 'OK')
     {
-        $this->addButton('confirm', $buttonText);
+        //$this->addButton('confirm', $buttonText);
+        $this->config['confirmButtonText'] = $buttonText;
         $this->closeOnClickOutside(false);
         $this->removeTimer();
 
