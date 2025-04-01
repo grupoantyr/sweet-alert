@@ -5,9 +5,9 @@
             var content = document.createElement('div');
             content.insertAdjacentHTML('afterbegin', config.content);
             config.content = content;
-            swal(config);
+            swal.fire(config);
         {% else %}
-            swal({!! Session::pull('sweet_alert.alert') !!});
+            swal.fire({!! Session::pull('sweet_alert.alert') !!});
         {% endif %}
     </script>
 {% endif %}
