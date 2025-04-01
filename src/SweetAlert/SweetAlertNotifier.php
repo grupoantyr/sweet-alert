@@ -281,7 +281,7 @@ class SweetAlertNotifier
      */
     public function html()
     {
-        $this->config['content'] = $this->config['text'];
+        $this->config['html'] = $this->config['text'];
 
         unset($this->config['text']);
 
