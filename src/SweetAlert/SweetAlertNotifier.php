@@ -50,11 +50,7 @@ class SweetAlertNotifier
     {
         $this->setConfig([
             'timer' => config('sweet-alert.autoclose'),
-            'text' => '',
-            'buttons' => [
-                'cancel' => false,
-                'confirm' => false,
-            ],
+            'text' => ''
         ]);
     }
 
