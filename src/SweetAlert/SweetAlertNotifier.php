@@ -239,7 +239,7 @@ class SweetAlertNotifier
      */
     public function closeOnClickOutside($value = true)
     {
-        $this->config['closeOnClickOutside'] = $value;
+        $this->config['allowOutsideClick'] = $value;
 
         return $this;
     }
